@@ -18,7 +18,7 @@ const projects = [
     title: "Chief Design Officer",
     description: "Manages design and creative direction.",
     image: "/team/img3.jpeg",
-    tags: ["Design", "Creativity"],
+    tags: ["Media", "Broadcast"],
   },
 ];
 
