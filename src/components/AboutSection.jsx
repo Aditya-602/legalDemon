@@ -36,13 +36,12 @@ export const AboutSection = () => {
               </li>
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center sm:justify-start">
-              <a href="contact" className="cosmic-button">
-                get in touch
+            <div className="flex justify-center pt-4">
+              <a href="#contact" className="cosmic-button">
+                Get in Touch
               </a>
             </div>
           </div>
-
           {/* RIGHT COLUMN - stacked cards remain centered */}
           <div className="flex flex-col gap-6">
             {/* Card 1 */}
