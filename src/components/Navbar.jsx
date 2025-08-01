@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils.js";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Box } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -31,12 +31,12 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-xl font-bold text-primary flex items-center space-x-2"
           href="#hero"
         >
+          <Box className="w-6 h-6 text-primary" />
           <span className="relative z-10">
-            {" "}
-            <span className="text-glow text-foreground"> Srivastava</span> Corp.
+            <span className="text-glow text-foreground">Srivastava</span> Corp.
           </span>
         </a>
 
