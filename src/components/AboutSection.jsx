@@ -51,7 +51,7 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
                 </div>
-                <div className="px-10">
+                <div className="px-0 text-left w-full flex flex-col items-start justify-center">
                   <h4 className="text-lg font-semibold">People First</h4>
                   <p className="text-muted-foreground text-sm">
                     We build with empathy. Behind every pixel is a person.
@@ -66,7 +66,7 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
-                <div className="px-10">
+                <div className="px-0 text-left w-full flex flex-col items-start justify-center">
                   <h4 className="text-lg font-semibold">Code with Soul</h4>
                   <p className="text-muted-foreground text-sm">
                     Every line we write is crafted with care.
@@ -81,7 +81,7 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Zap className="h-6 w-6 text-primary" />
                 </div>
-                <div className="px-10">
+                <div className="px-0 text-left w-full flex flex-col items-start justify-center">
                   <h4 className="text-lg font-semibold">Fueled by Purpose</h4>
                   <p className="text-muted-foreground text-sm">
                     We don’t just build things - we chase impact.
