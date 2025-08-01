@@ -35,7 +35,7 @@ export const HighlightsSection = () => {
   ];
 
   return (
-    <section id="featured" className="py-24 px-4 mb-10">
+    <section id="featured" className="py-24 relative px-4 mb-10">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           The <span className="text-primary">Srivastava</span>{" "}
