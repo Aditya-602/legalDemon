@@ -6,6 +6,7 @@ import { HighlightsSection } from "../components/HighlightSection";
 import { Navbar } from "../components/Navbar";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { StarBackground } from "../components/StarBackground";
+import Aurora from "../lib/animation/Aurora";
 
 export const Home = () => {
   return (
@@ -13,7 +14,8 @@ export const Home = () => {
       {/* theme toggle */}
 
       {/* background effects */}
-      <StarBackground />
+      {/* <StarBackground /> */}
+      <Aurora />
 
       {/* navbar */}
       <Navbar />

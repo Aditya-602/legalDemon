@@ -1,9 +1,29 @@
 import { Code, User, Zap } from "lucide-react";
+import SplitText from "../lib/animation/SplitText";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
+      
       <div className="container mx-auto max-w-5xl">
+        {/* <SplitText
+          text={
+            <>
+              <span className="text-white">About</span>{" "}
+              <span className="text-primary">us</span>
+            </>
+          }
+          className="text-3xl md:text-4xl font-bold mb-2 text-center"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+        /> */}
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
           About <span className="text-primary">us</span>
         </h2>
