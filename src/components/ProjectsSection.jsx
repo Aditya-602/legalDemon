@@ -1,21 +1,21 @@
 const projects = [
   {
     id: 1,
-    title: "Chief Executive Officer",
+    title: "CEO Daadi",
     description: "Leads Srivastava corp. with vision and strategy.",
     image: "/team/img1.jpeg",
     tags: ["Supreme Court", "Parliament"],
   },
   {
     id: 2,
-    title: "Chief Technology Officer",
+    title: "CTO Chachu",
     description: "Heads technology and development, and overall welfare.",
     image: "/team/img2.jpeg",
     tags: ["Technology", "Engineering"],
   },
   {
     id: 3,
-    title: "Chief Design Officer",
+    title: "CDO Bua",
     description: "Manages design and creative direction.",
     image: "/team/img3.jpeg",
     tags: ["Media", "Broadcast"],
