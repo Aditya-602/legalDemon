@@ -1,69 +1,48 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-import { cn } from "../lib/utils.js";
+import { cn } from "../lib/utils";
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
+  // Runs after component mounts
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 640);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
 
-  useEffect(() => {
-    if (isMobile) {
-      // Always dark mode on mobile
+    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
       document.documentElement.classList.add("dark");
-      setIsDarkMode(true);
       localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
     } else {
-      // Use stored theme on desktop
-      const storedTheme = localStorage.getItem("theme");
-      if (storedTheme === "dark") {
-        setIsDarkMode(true);
-        document.documentElement.classList.add("dark");
-      } else {
-        setIsDarkMode(false);
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-    }
-  }, [isMobile]);
-
-  const toggleTheme = () => {
-    if (isMobile) return; // Prevent toggling on mobile
-    if (isDarkMode) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
       setIsDarkMode(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDarkMode(true);
     }
-  };
+  }, []);
 
-  // Hide toggle on mobile
-  if (isMobile) return null;
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? "light" : "dark";
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
+    setIsDarkMode(newTheme === "dark");
+  };
 
   return (
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus: outline-hidden"
+        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        "focus:outline-none"
       )}
-      title="Toggle dark/light mode"
+      aria-label="Toggle Theme"
     >
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-500" />
+        <Sun className="h-6 w-6 text-yellow-300" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-700" />
+        <Moon className="h-6 w-6 text-blue-900" />
       )}
     </button>
   );

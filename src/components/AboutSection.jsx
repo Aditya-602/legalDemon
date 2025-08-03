@@ -11,11 +11,11 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* LEFT COLUMN — just this is left-aligned */}
           <div className="space-y-6 text-left">
-            <h3 className="text-2xl font-semibold">
+            <h3 className="text-2xl mt-10 font-semibold">
               A legacy rooted in the Family.
             </h3>
 
-            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+            <ul className="list-disc text-xs md:text-[15px] list-inside text-muted-foreground space-y-8">
               <li>
                 Established in <strong>1847</strong>, Srivastava Corp. has stood
                 strong across generations.

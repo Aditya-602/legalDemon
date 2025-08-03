@@ -28,6 +28,7 @@
       transform: translateY(-10px);
     }
   }
+
   @keyframes pulse-subtle {
     0%,
     100% {
@@ -37,6 +38,7 @@
       opacity: 0.8;
     }
   }
+
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -47,6 +49,7 @@
       transform: translateY(0);
     }
   }
+
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -63,19 +66,13 @@
 }
 
 @layer base {
-  :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
+  /* Force dark mode globally */
+  html {
+    @apply scroll-smooth;
   }
 
-  .dark {
+  :root {
+    /* Use dark mode values as default */
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
@@ -89,10 +86,6 @@
 
   * {
     @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
   }
 
   body {

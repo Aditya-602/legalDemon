@@ -56,9 +56,9 @@ export const HighlightsSection = () => {
               } items-center gap-12`}
             >
               {/* Text */}
-              <div className="text-left w-full md:w-1/2 space-y-4">
+              <div className="text-left w-full md:w-1/2 space-y-6">
                 <h3 className="text-2xl font-bold">{item.title}</h3>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                <ul className="list-disc  text-xs md:text-base list-inside text-muted-foreground space-y-5">
                   {item.bullets.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

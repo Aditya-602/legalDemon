@@ -6,13 +6,11 @@ import { HighlightsSection } from "../components/HighlightSection";
 import { Navbar } from "../components/Navbar";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { StarBackground } from "../components/StarBackground";
-import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Home = () => {
   return (
     <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
       {/* theme toggle */}
-      <ThemeToggle />
 
       {/* background effects */}
       <StarBackground />
