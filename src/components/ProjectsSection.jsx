@@ -11,7 +11,7 @@ const projects = [
     title: "CTO Chachu",
     description: "Heads technology and development, and overall welfare.",
     image: "/team/img2.jpeg",
-    tags: ["Technology", "Engineering"],
+    tags: ["Stock", "Nifty50"],
   },
   {
     id: 3,
