@@ -66,22 +66,21 @@
 }
 
 @layer base {
-  /* Force dark mode globally */
   html {
     @apply scroll-smooth;
   }
 
   :root {
-    /* Use dark mode values as default */
-    --background: 222 47% 4%;
-    --foreground: 213 31% 91%;
+    /* Light mode as default */
+    --background: 0 0% 100%;          /* white */
+    --foreground: 0 0% 0%;            /* black */
 
-    --card: 222 47% 8%;
+    --card: 0 0% 98%;                 /* very light gray card bg */
 
-    --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
+    --primary: 0 100% 26%;           /* violet-ish primary */
+    --primary-foreground: 0 0% 100%;  /* white text on primary */
 
-    --border: 217 33% 20%;
+    --border: 0 0% 80%;               /* light gray border */
   }
 
   * {

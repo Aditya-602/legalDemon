@@ -4,10 +4,8 @@ import { X, Menu, Box } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#hero" },
+  { name: "Upload", href: "#contact" },
   { name: "About", href: "#about" },
-  { name: "Team", href: "#projects" },
-  { name: "Featured", href: "#featured" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export const Navbar = () => {
@@ -33,31 +31,30 @@ export const Navbar = () => {
         )}
       >
         <div className="container flex items-center justify-between">
+          {/* logo on left */}
           <a
             className="text-xl font-bold text-primary flex items-center space-x-2"
             href="#hero"
           >
             <Box className="w-6 h-6 text-primary" />
-            <span className="relative z-10">
-              <span className="text-glow text-foreground">Srivastava</span>{" "}
-              Corp.
-            </span>
           </a>
 
-          {/* desktop nav */}
-          <div className="hidden md:flex space-x-8 text-xl">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              >
-                {item.name}
-              </a>
-            ))}
+          {/* desktop nav centered */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex space-x-8 text-xl">
+              {navItems.map((item, key) => (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* mobile nav toggle button */}
+          {/* mobile nav toggle button on right */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="md:hidden p-2 text-foreground z-50"
@@ -68,7 +65,7 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* mobile menu overlay (OUTSIDE container and nav) */}
+      {/* mobile menu overlay */}
       <div
         className={cn(
           "fixed inset-0 bg-background/90 backdrop-blur-md z-40 flex flex-col items-center justify-center",
