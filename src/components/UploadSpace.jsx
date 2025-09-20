@@ -1,6 +1,6 @@
 import { FileUp, Scale, Lightbulb } from "lucide-react";
 
-export const AboutSection = () => {
+export const UploadSpace = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto w-1/2 h-40">

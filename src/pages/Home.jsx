@@ -1,5 +1,5 @@
-import { AboutSection } from "../components/AboutSection";
-import { ContactSection } from "../components/ContactSection";
+import { UploadSpace } from "../components/UploadSpace";
+import { ModelSpace } from "../components/ModelSpace";
 import { Footer } from "../components/Footer";
 import { HeroSection } from "../components/HeroSection";
 import { Navbar } from "../components/Navbar";
@@ -15,15 +15,10 @@ export const Home = () => {
           hue={300}
           forceHoverState={false}
         />
-
-
       <Navbar />
-
       <HeroSection />
-      
-      <AboutSection />
-      <ContactSection />
-
+      <UploadSpace />
+      <ModelSpace />
       <Footer />
     </div>
   );

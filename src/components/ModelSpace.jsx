@@ -1,7 +1,7 @@
 import PixelCard from "../lib/animation/PixelCard";
 import { Upload } from "lucide-react";
 
-export const ContactSection = () => {
+export const ModelSpace = () => {
   return (
     <section
       id="contact"
